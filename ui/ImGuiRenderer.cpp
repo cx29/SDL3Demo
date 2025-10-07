@@ -36,7 +36,7 @@ bool ImGuiRenderer::Init(SDL_Window *window, SDL_GLContext gl_context) {
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
     // 主题颜色为亮
-    ImGui::StyleColorsLight();
+    ImGui::StyleColorsDark();
 
     //初始化平台/渲染器后端
     const char *glsl_version = "#version 330";

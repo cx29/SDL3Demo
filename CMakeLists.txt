@@ -27,7 +27,9 @@ add_executable(SDL3Demo main.cpp
         ui/widgets/DemoWIndow.cpp
         ui/UIManager.h
         ui/UIManager.cpp
-        ui/widgets/WidgetAdapter.h)
+        ui/widgets/MenuWindow.h
+        ui/widgets/MenuWindow.cpp
+)
 
 target_link_libraries(SDL3Demo PRIVATE
         SDL3::SDL3
