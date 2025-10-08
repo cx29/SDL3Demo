@@ -3,12 +3,25 @@
 //
 
 #include "MenuWindow.h"
+#include "Panel/HomePanel.h"
+#include "Panel/SettingPanel.h"
+#include "Panel/GamePanel.h"
 #include <imgui.h>
 
-MenuWindow::MenuWindow() : selected_index_(0), menu_items_({"Home", "Settings", "About"}) {}
+MenuWindow::MenuWindow() : selected_index_(0) {
+    panels_.emplace_back(std::make_unique<HomePanel>());
+    panels_.emplace_back(std::make_unique<SettingPanel>());
+    panels_.emplace_back(std::make_unique<GamePanel>());
+
+    for (auto &panel: panels_) {
+        menu_items_.push_back(panel->GetName());
+    }
+}
 
 void MenuWindow::Update(float delta_seconds) {
-    (void) delta_seconds;
+    if (selected_index_ >= 0 && selected_index_ < panels_.size()) {
+        panels_[selected_index_]->Update(delta_seconds);
+    }
 }
 
 void MenuWindow::RenderUI() {
@@ -34,14 +47,13 @@ void MenuWindow::RenderUI() {
     ImGui::EndChild();
     ImGui::SameLine();
     ImGui::BeginChild("RightPanel", ImVec2(0, 0), true);
-    if (selected_index_ == 0) {
-        ImGui::Text("Welcome to Home Page");
-    } else if (selected_index_ == 1) {
-        ImGui::Text("Settings Page");
-    } else if (selected_index_ == 2) {
-        ImGui::Text("About Page");
-        ImGui::Text("SDL3+OpenGL+ImGui Example");
+    if (selected_index_ >= 0 && selected_index_ < panels_.size()) {
+        panels_[selected_index_]->Render();
     }
     ImGui::EndChild();
     ImGui::End();
+}
+
+const char *MenuWindow::Name() const {
+    return "MenuWindow";
 }

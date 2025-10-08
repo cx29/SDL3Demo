@@ -7,6 +7,7 @@
 #define SDL3DEMO_MENUWINDOW_H
 
 #include "../IUIState.h"
+#include "../IPanel.h"
 #include <string>
 #include <vector>
 
@@ -18,11 +19,12 @@ public:
 
     void RenderUI() override;
 
-    const char *Name() const override { return "MenuWIndow"; }
+    const char *Name() const override;
 
 private:
     int selected_index_;
     std::vector<std::string> menu_items_;
+    std::vector<std::unique_ptr<IPanel>> panels_;
 };
 
 #endif //SDL3DEMO_MENUWINDOW_H

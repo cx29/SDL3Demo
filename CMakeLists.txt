@@ -29,6 +29,11 @@ add_executable(SDL3Demo main.cpp
         ui/UIManager.cpp
         ui/widgets/MenuWindow.h
         ui/widgets/MenuWindow.cpp
+        ui/IPanel.h
+        ui/widgets/Panel/HomePanel.h
+        ui/widgets/Panel/SettingPanel.h
+        ui/widgets/Panel/GamePanel.h
+        ui/widgets/Panel/GamePanel.cpp
 )
 
 target_link_libraries(SDL3Demo PRIVATE
