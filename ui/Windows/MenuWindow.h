@@ -7,7 +7,7 @@
 #define SDL3DEMO_MENUWINDOW_H
 
 #include "../IUIState.h"
-#include "../IPanel.h"
+#include "IPanel.h"
 #include <string>
 #include <vector>
 

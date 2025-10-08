@@ -5,7 +5,7 @@
 #ifndef SDL3DEMO_SETTINGPANEL_H
 #define SDL3DEMO_SETTINGPANEL_H
 
-#include "../../IPanel.h"
+#include "../IPanel.h"
 #include <imgui.h>
 
 class SettingPanel : public IPanel {

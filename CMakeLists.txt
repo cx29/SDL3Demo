@@ -23,17 +23,15 @@ add_executable(SDL3Demo main.cpp
         ui/IUIState.h
         ui/ImGuiState.h
         ui/ImGuiState.cpp
-        ui/widgets/DemoWindow.h
-        ui/widgets/DemoWIndow.cpp
         ui/UIManager.h
         ui/UIManager.cpp
-        ui/widgets/MenuWindow.h
-        ui/widgets/MenuWindow.cpp
-        ui/IPanel.h
-        ui/widgets/Panel/HomePanel.h
-        ui/widgets/Panel/SettingPanel.h
-        ui/widgets/Panel/GamePanel.h
-        ui/widgets/Panel/GamePanel.cpp
+        ui/Windows/MenuWindow.h
+        ui/Windows/MenuWindow.cpp
+        ui/Windows/IPanel.h
+        ui/Windows/Panel/HomePanel.h
+        ui/Windows/Panel/SettingPanel.h
+        ui/Windows/Panel/GamePanel.h
+        ui/Windows/Panel/GamePanel.cpp
 )
 
 target_link_libraries(SDL3Demo PRIVATE

@@ -6,7 +6,7 @@
 #ifndef SDL3DEMO_HOMEPANEL_H
 #define SDL3DEMO_HOMEPANEL_H
 
-#include "../../IPanel.h"
+#include "../IPanel.h"
 #include <imgui.h>
 
 class HomePanel : public IPanel {

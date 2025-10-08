@@ -6,7 +6,7 @@
 #ifndef SDL3DEMO_GAMEPANEL_H
 #define SDL3DEMO_GAMEPANEL_H
 
-#include "../../IPanel.h"
+#include "../IPanel.h"
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>

@@ -10,6 +10,8 @@ class IPanel {
 public:
     virtual ~IPanel() = default;
 
+    virtual void Init(int width, int height) = 0;
+
     virtual void Update(float delta_seconds) = 0;
 
     virtual void Render() = 0;
