@@ -11,6 +11,7 @@
 
 class HomePanel : public IPanel {
 public:
+
     ~HomePanel() override = default;
 
     void Render() override {
@@ -24,6 +25,10 @@ public:
 
     void Update(float delta_seconds) override {
         (void) delta_seconds;
+    }
+
+    void Init(int width, int height) override {
+
     }
 };
 

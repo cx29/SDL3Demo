@@ -137,3 +137,7 @@ void GamePanel::Render() {
     ImGui::Text("Game Scene:");
     ImGui::Image((ImTextureID) (intptr_t) color_tex_, ImVec2(width_, height_), ImVec2(0, 1), ImVec2(1, 0));
 }
+
+void GamePanel::Init(int width, int height) {
+
+}

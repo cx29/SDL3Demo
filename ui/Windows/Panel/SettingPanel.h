@@ -27,6 +27,10 @@ public:
     void Update(float delta_seconds) override {
         (void) delta_seconds;
     }
+
+    void Init(int width, int height) override {
+
+    }
 };
 
 #endif //SDL3DEMO_SETTINGPANEL_H

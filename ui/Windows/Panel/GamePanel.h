@@ -25,6 +25,8 @@ public:
 
     const char *GetName() const override { return "Game"; }
 
+    void Init(int width, int height) override;
+
 private:
     GLuint fbo_ = 0, color_tex_ = 0, rbo_ = 0;
     GLuint vao_ = 0, vbo_ = 0, shader_ = 0;
